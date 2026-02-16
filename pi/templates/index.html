@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Monitor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Solar Panel Monitor</h1>
+    <p id="status">Connecting...</p>
+
+    <section class="cards">
+      <article class="card"><h2>Voltage</h2><p><span id="voltage">--</span> V</p></article>
+      <article class="card"><h2>Current</h2><p><span id="current">--</span> A</p></article>
+      <article class="card"><h2>Power</h2><p><span id="power">--</span> W</p></article>
+      <article class="card"><h2>Front Temp</h2><p><span id="tempFront">--</span> °C</p></article>
+      <article class="card"><h2>Back Temp</h2><p><span id="tempBack">--</span> °C</p></article>
+      <article class="card"><h2>Daily Energy</h2><p><span id="energy">--</span> Wh</p></article>
+    </section>
+
+    <section class="charts">
+      <canvas id="powerChart"></canvas>
+      <canvas id="voltageChart"></canvas>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

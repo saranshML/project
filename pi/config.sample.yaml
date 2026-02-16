@@ -1,0 +1,22 @@
+serial:
+  port: /dev/ttyACM0
+  baudrate: 115200
+  timeout_s: 1.0
+
+sampling:
+  max_buffer_points: 7200   # ~1 hour at 2 Hz
+  stale_after_s: 5
+
+calibration:
+  voltage_gain: 1.0
+  voltage_offset: 0.0
+  current_gain: 1.0
+  current_offset: 0.0
+
+logging:
+  csv_path: data/solar_log.csv
+
+server:
+  host: 0.0.0.0
+  port: 5000
+  debug: false
